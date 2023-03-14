@@ -22,8 +22,8 @@ MonoBehaviour:
   _fileName: 
   displayName: 
   description: 
-  startingSceneID: 1
-  startingPositionID: 1
+  startingSceneID: 0
+  startingPositionID: 0
   factionID: 0
   speciesID: -1
   malePrefab: {fileID: 0}

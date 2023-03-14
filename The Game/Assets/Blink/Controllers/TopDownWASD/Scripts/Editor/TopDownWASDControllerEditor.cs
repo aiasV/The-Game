@@ -1,7 +1,5 @@
 ﻿using UnityEditor;
-using UnityEditorInternal;
 using UnityEngine;
-using UnityEngine.AI;
 
 namespace BLINK.Controller
 {
@@ -150,6 +148,46 @@ namespace BLINK.Controller
             REF.animatorSmoothTime = EditorGUILayout.FloatField(
                 GetGUIContent("Animation Smooth Time", "How quick is the blending between animations?"),
                 REF.animatorSmoothTime);
+            
+            GUILayout.Space(5);
+            GUILayout.Label("RPG BUILDER", titleStyle);
+            GUILayout.Space(5);
+            
+            REF.normalCameraFOV = EditorGUILayout.FloatField(
+                GetGUIContent("Normal FOV:", "The normal camera FOV"),
+                REF.normalCameraFOV);
+            REF.sprintingCameraFOV = EditorGUILayout.FloatField(
+                GetGUIContent("Sprint FOV:", "The camera FOV while sprinting"),
+                REF.sprintingCameraFOV);
+            REF.cameraFOVLerpSpeed = EditorGUILayout.FloatField(
+                GetGUIContent("FOV Lerp Speed:", "The speed at which the FOV transition at"),
+                REF.cameraFOVLerpSpeed);
+            REF.sprintSpeedModifier = EditorGUILayout.FloatField(
+                GetGUIContent("Sprint Modifier:", "The movement speed will be multiplied by that while sprinting"),
+                REF.sprintSpeedModifier);
+            
+            REF.useActionKeys = EditorGUILayout.Toggle(
+                GetGUIContent("Use Action Keys?", "Should the key be pulled from RPG Builder action keys instead?"),
+                REF.useActionKeys);
+            if (REF.useActionKeys)
+            {
+                REF.moveUpKeyActionKeyName = EditorGUILayout.TextField(
+                    GetGUIContent("Move Up Key Name", "The action key name for the Move Up Key"),
+                    REF.moveUpKeyActionKeyName);
+                REF.moveDownKeyActionKeyName = EditorGUILayout.TextField(
+                    GetGUIContent("Move Down Key Name", "The action key name for the Move Down Key"),
+                    REF.moveDownKeyActionKeyName);
+                REF.moveLeftActionKeyName = EditorGUILayout.TextField(
+                    GetGUIContent("Move Left Key Name", "The action key name for the Move Left Key"),
+                    REF.moveLeftActionKeyName);
+                REF.moveRightActionKeyName = EditorGUILayout.TextField(
+                    GetGUIContent("Move Right Key Name", "The action key name for the Move Right Key"),
+                    REF.moveRightActionKeyName);
+                REF.jumpActionKeyName = EditorGUILayout.TextField(
+                    GetGUIContent("Jump Key Name", "The action key name for the Jump Key"),
+                    REF.jumpActionKeyName);
+            }
+            
 
             if (!EditorGUI.EndChangeCheck()) return;
             EditorUtility.SetDirty(REF);

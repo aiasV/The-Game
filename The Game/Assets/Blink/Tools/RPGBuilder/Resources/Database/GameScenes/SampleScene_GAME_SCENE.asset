@@ -94,4 +94,4 @@ MonoBehaviour:
   UpdateSunPosition: 0
   UpdateFog: 0
   regions: []
-  DefaultRegion: {fileID: 11400000, guid: 0f4a8047d05c88344985899bfd19165f, type: 2}
+  DefaultRegion: {fileID: 0}

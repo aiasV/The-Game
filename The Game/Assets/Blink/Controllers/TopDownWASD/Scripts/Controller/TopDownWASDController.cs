@@ -1,6 +1,8 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using BLINK.RPGBuilder.Controller;
+using BLINK.RPGBuilder.LogicMono;
 using UnityEditor;
 using UnityEngine;
 
@@ -70,6 +72,7 @@ namespace BLINK.Controller
         static readonly int VerticalHash = Animator.StringToHash("Vertical");
         static readonly int FallingHash = Animator.StringToHash("Falling");
         static readonly int JumpHash = Animator.StringToHash("Jump");
+        static readonly int moveSpeedModifier = Animator.StringToHash("MoveSpeedModifier");
         public float animatorSmoothTime = 0.15f;
 
         // OTHER
@@ -86,21 +89,34 @@ namespace BLINK.Controller
         private float _rotationAngle = 180.0f;
         private float _targetRotationAngle = 180.0f;
         private Vector2? _targetPosition;
+        
+        // RPGB INTEGRATION
+        public TopDownWASDControllerEssentials ControllerEssentials;
+        public bool isSprinting;
+        public float normalCameraFOV = 60, sprintingCameraFOV = 70;
+        public float cameraFOVLerpSpeed = 5;
+        public bool useActionKeys;
+        public string moveUpKeyActionKeyName,  moveDownKeyActionKeyName,  moveLeftActionKeyName,  moveRightActionKeyName, jumpActionKeyName;
+        public float sprintSpeedModifier = 1.5f;
 
         private void Awake()
         {
+            ControllerEssentials = GetComponent<TopDownWASDControllerEssentials>();
+        }
+
+        private void Start()
+        {
+            if (!RPGBuilderEssentials.Instance.isInGame) return;
             _actualMoveSpeed = moveSpeed;
             InitReferences();
-            
-            if (cameraEnabled)
-            {
-                InitCameraValues();
-                InitCamera();
-            }
+
+            InitCameraValues();
+            InitCamera();
         }
 
         void Update()
         {
+            if (!RPGBuilderEssentials.Instance.isInGame) return;
             if (movementEnabled) HandleMovement();
             if (cameraEnabled)  CameraLogic();
         }
@@ -115,6 +131,22 @@ namespace BLINK.Controller
             _anim = GetComponent<Animator>();
             _characterController = GetComponent<CharacterController>();
         }
+        
+        #region RPGBIntegration
+
+        public void SetSpeed(float newSpeed)
+        {
+            _actualMoveSpeed = newSpeed;
+            float speedMod = newSpeed / 5;
+            _anim.SetFloat(moveSpeedModifier, speedMod);
+        }
+
+        public void ResetMovement()
+        {
+            _targetPosition = null;
+        }
+
+        #endregion
 
         private void LateCameraUpdate()
         {
@@ -255,15 +287,16 @@ namespace BLINK.Controller
 
         private void HandleMovement()
         {
+            if (ControllerEssentials.HasMovementRestrictions()) return;
+            
             _displacement.y = 0;
-
             if (_characterController.isGrounded)
             {
                 _verticalSpeed = 0f;
                 _isJumping = false;
                 Vector2 input = GetMovementInput();
 
-                if (Input.GetKeyDown(jumpKey))
+                if (IsKeyDown(useActionKeys ? RPGBuilderUtilities.GetCurrentKeyByActionKeyName(jumpActionKeyName) : jumpKey))
                 {
                     input = Vector2.zero;
                     _targetPosition = null;
@@ -390,22 +423,22 @@ namespace BLINK.Controller
             Vector2 v2Input = new Vector2();
             if (movementInputType == MovementInputType.Keyboard)
             {
-                if (Input.GetKey(moveUpKey))
+                if (IsKeyHeld(useActionKeys ? RPGBuilderUtilities.GetCurrentKeyByActionKeyName(moveUpKeyActionKeyName) : moveUpKey))
                 {
                     v2Input.y = 1;
                 }
 
-                if (Input.GetKey(moveDownKey))
+                if (IsKeyHeld(useActionKeys ? RPGBuilderUtilities.GetCurrentKeyByActionKeyName(moveDownKeyActionKeyName) : moveDownKey))
                 {
                     v2Input.y -= 1;
                 }
 
-                if (Input.GetKey(moveLeftKey))
+                if (IsKeyHeld(useActionKeys ? RPGBuilderUtilities.GetCurrentKeyByActionKeyName(moveLeftActionKeyName) : moveLeftKey))
                 {
                     v2Input.x -= 1;
                 }
 
-                if (Input.GetKey(moveRightKey))
+                if (IsKeyHeld(useActionKeys ? RPGBuilderUtilities.GetCurrentKeyByActionKeyName(moveRightActionKeyName) : moveRightKey))
                 {
                     v2Input.x = 1;
                 }
@@ -431,6 +464,15 @@ namespace BLINK.Controller
             var playerPlane = new Plane(Vector3.up, transform.position);
             var ray = playerCamera.ScreenPointToRay(Input.mousePosition);
             return playerPlane.Raycast(ray, out var hitDist) ? ray.GetPoint(hitDist) : Vector3.zero;
+        }
+        
+        private bool IsKeyDown(KeyCode key)
+        {
+            return Input.GetKeyDown(key);
+        }
+        private bool IsKeyHeld(KeyCode key)
+        {
+            return Input.GetKey(key);
         }
 
         void OnAnimatorIK()
