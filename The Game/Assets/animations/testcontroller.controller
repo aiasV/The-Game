@@ -111,17 +111,17 @@ AnimatorStateMachine:
   - {fileID: 6722041417554760641}
   m_EntryTransitions: []
   m_StateMachineTransitions:
-  - first: {fileID: -2356750557622966414}
-    second:
-    - {fileID: 5815115793177935940}
-    - {fileID: -3797404202590618625}
-  - first: {fileID: -7418743278859055856}
-    second:
-    - {fileID: 2963274358551191444}
   - first: {fileID: 4041936387568982116}
     second:
     - {fileID: 5998897815311065014}
     - {fileID: 5405725960090400869}
+  - first: {fileID: -7418743278859055856}
+    second:
+    - {fileID: 2963274358551191444}
+  - first: {fileID: -2356750557622966414}
+    second:
+    - {fileID: 5815115793177935940}
+    - {fileID: -3797404202590618625}
   m_StateMachineBehaviours: []
   m_AnyStatePosition: {x: -110, y: 70, z: 0}
   m_EntryPosition: {x: 430, y: -110, z: 0}
@@ -234,31 +234,31 @@ AnimatorController:
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: Walking
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: Running
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: Dashing
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: Speed
     m_Type: 1
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
