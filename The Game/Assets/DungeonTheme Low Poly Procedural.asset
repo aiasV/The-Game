@@ -1369,15 +1369,15 @@ MonoBehaviour:
   caption: Game Object Node
   bounds:
     serializedVersion: 2
-    x: -2.4196625
-    y: 397.4787
+    x: -6.617035
+    y: 394.68048
     width: 120
     height: 120
   canBeDeleted: 1
   canBeSelected: 1
   canBeMoved: 1
   selected: 0
-  zIndex: 689
+  zIndex: 761
   inputPins:
   - {fileID: -2857151513527539778}
   outputPins:
@@ -1938,7 +1938,7 @@ MonoBehaviour:
   indexCounter:
     index: 38
   topZIndex:
-    index: 757
+    index: 761
   nodes:
   - {fileID: -2858590318998337382}
   - {fileID: -6386720188268520691}
@@ -3717,7 +3717,7 @@ MonoBehaviour:
   canBeDeleted: 1
   canBeSelected: 1
   canBeMoved: 1
-  selected: 1
+  selected: 0
   zIndex: 757
   inputPins:
   - {fileID: -7400997701751444593}
