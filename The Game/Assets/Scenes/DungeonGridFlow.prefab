@@ -1,0 +1,2179 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6022665015180171286
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6025787379306089402}
+  - component: {fileID: 5910197426396989934}
+  - component: {fileID: 4054416740767925648}
+  - component: {fileID: 4333095514300471970}
+  - component: {fileID: 6436312144524196415}
+  - component: {fileID: 5910525670812695108}
+  - component: {fileID: 540254647278541072}
+  - component: {fileID: 267693455091782350}
+  - component: {fileID: 6603251336701148999}
+  - component: {fileID: 1171519897085319270}
+  - component: {fileID: 8289784509706679763}
+  m_Layer: 0
+  m_Name: DungeonGridFlow
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!4 &6025787379306089402
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6022665015180171286}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5910197426396989934
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6022665015180171286}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e65b74248fe594982b0d9bfde7d96c6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dungeonThemes:
+  - {fileID: 11400000, guid: 130d11c156188284caced090fb23cb75, type: 2}
+  debugDraw: 1
+--- !u!114 &4054416740767925648
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6022665015180171286}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbb6c97d89d49bb4bb439ecf27df8fcf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Seed: 201324491
+  flowAsset: {fileID: 11400000, guid: 276c683bfa0467741b65e259f639c0c5, type: 2}
+  gridSize: {x: 4, y: 4, z: 4}
+  numGraphRetries: 100
+  Mode2D: 0
+  flipEdgeWalls: 0
+--- !u!114 &4333095514300471970
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6022665015180171286}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0aa6c53aeca2ab446b62af5bc1d59c4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  asyncBuild: 0
+  maxBuildTimePerFrame: 32
+  asyncBuildStartPosition: {fileID: 0}
+--- !u!114 &6436312144524196415
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6022665015180171286}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0bcaac49d17086f4db6c81ef45e6ea4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  layoutGraph:
+    Nodes:
+    - nodeId:
+        A: -1711206824
+        B: 1168614150
+        C: -1674041721
+        D: -902988463
+      position: {x: 0, y: 480, z: 0}
+      active: 1
+      color: {r: 1, g: 1, b: 0, a: 1}
+      coord: {x: 0, y: 0, z: 0}
+      pathName: bonus_main
+      items:
+      - itemId:
+          A: -2064426398
+          B: 1203200192
+          C: 2144514717
+          D: 27100962
+        type: 2
+        markerName: Grunt
+        referencedItemIds: []
+        editorSelected: 0
+        customInfo:
+          itemType: 
+          text: 
+          textColor: {r: 0, g: 0, b: 0, a: 0}
+          backgroundColor: {r: 0, g: 0, b: 0, a: 0}
+      pathIndex: 0
+      pathLength: 2
+      mainPath: 0
+    - nodeId:
+        A: 1923216922
+        B: 1262719148
+        C: 2092357541
+        D: 1166984582
+      position: {x: 120, y: 480, z: 0}
+      active: 1
+      color: {r: 1, g: 1, b: 0, a: 1}
+      coord: {x: 1, y: 0, z: 0}
+      pathName: bonus_main
+      items:
+      - itemId:
+          A: 690530601
+          B: 1083111599
+          C: 582155145
+          D: -216035230
+        type: 3
+        markerName: Treasure
+        referencedItemIds: []
+        editorSelected: 0
+        customInfo:
+          itemType: 
+          text: 
+          textColor: {r: 0, g: 0, b: 0, a: 0}
+          backgroundColor: {r: 0, g: 0, b: 0, a: 0}
+      - itemId:
+          A: 668039614
+          B: 1142702179
+          C: -1031328367
+          D: 148708818
+        type: 2
+        markerName: Grunt
+        referencedItemIds: []
+        editorSelected: 0
+        customInfo:
+          itemType: 
+          text: 
+          textColor: {r: 0, g: 0, b: 0, a: 0}
+          backgroundColor: {r: 0, g: 0, b: 0, a: 0}
+      - itemId:
+          A: -1667839992
+          B: 1300112445
+          C: 328338616
+          D: 413941373
+        type: 2
+        markerName: Grunt
+        referencedItemIds: []
+        editorSelected: 0
+        customInfo:
+          itemType: 
+          text: 
+          textColor: {r: 0, g: 0, b: 0, a: 0}
+          backgroundColor: {r: 0, g: 0, b: 0, a: 0}
+      - itemId:
+          A: -952961636
+          B: 1317946116
+          C: -1425710966
+          D: 834638705
+        type: 2
+        markerName: Grunt
+        referencedItemIds: []
+        editorSelected: 0
+        customInfo:
+          itemType: 
+          text: 
+          textColor: {r: 0, g: 0, b: 0, a: 0}
+          backgroundColor: {r: 0, g: 0, b: 0, a: 0}
+      pathIndex: 1
+      pathLength: 2
+      mainPath: 0
+    - nodeId:
+        A: -920520293
+        B: 1296730428
+        C: 366009260
+        D: 1006234625
+      position: {x: 240, y: 480, z: 0}
+      active: 1
+      color: {r: 1, g: 0.5, b: 0, a: 1}
+      coord: {x: 2, y: 0, z: 0}
+      pathName: alt
+      items: []
+      pathIndex: 4
+      pathLength: 5
+      mainPath: 0
+    - nodeId:
+        A: -743480471
+        B: 1095059803
+        C: -583609208
+        D: 1078836237
+      position: {x: 360, y: 480, z: 0}
+      active: 1
+      color: {r: 1, g: 0.5, b: 0, a: 1}
+      coord: {x: 3, y: 0, z: 0}
+      pathName: alt
+      items: []
+      pathIndex: 3
+      pathLength: 5
+      mainPath: 0
+    - nodeId:
+        A: 153603310
+        B: 1149193762
+        C: 309322927
+        D: -628040343
+      position: {x: 480, y: 480, z: 0}
+      active: 1
+      color: {r: 1, g: 0.5, b: 0, a: 1}
+      coord: {x: 4, y: 0, z: 0}
+      pathName: alt
+      items:
+      - itemId:
+          A: -165239830
+          B: 1291403379
+          C: 970522258
+          D: 1989407898
+        type: 2
+        markerName: Grunt
+        referencedItemIds: []
+        editorSelected: 0
+        customInfo:
+          itemType: 
+          text: 
+          textColor: {r: 0, g: 0, b: 0, a: 0}
+          backgroundColor: {r: 0, g: 0, b: 0, a: 0}
+      - itemId:
+          A: -182254025
+          B: 1257759171
+          C: -1470337865
+          D: -1628068517
+        type: 2
+        markerName: Grunt
+        referencedItemIds: []
+        editorSelected: 0
+        customInfo:
+          itemType: 
+          text: 
+          textColor: {r: 0, g: 0, b: 0, a: 0}
+          backgroundColor: {r: 0, g: 0, b: 0, a: 0}
+      - itemId:
+          A: -1389898262
+          B: 1334401863
+          C: 25350282
+          D: -1770839815
+        type: 2
+        markerName: Grunt
+        referencedItemIds: []
+        editorSelected: 0
+        customInfo:
+          itemType: 
+          text: 
+          textColor: {r: 0, g: 0, b: 0, a: 0}
+          backgroundColor: {r: 0, g: 0, b: 0, a: 0}
+      - itemId:
+          A: 1537983384
+          B: 1146547068
+          C: -1484667766
+          D: 700757932
+        type: 6
+        markerName: MyItem
+        referencedItemIds: []
+        editorSelected: 0
+        customInfo:
+          itemType: weapon_rack
+          text: W
+          textColor: {r: 0.0993236, g: 0.19598128, b: 0.2264151, a: 1}
+          backgroundColor: {r: 0.754717, g: 0.5991564, b: 0.38803846, a: 1}
+      pathIndex: 2
+      pathLength: 5
+      mainPath: 0
+    - nodeId:
+        A: 1609750487
+        B: 1087407816
+        C: -1580946500
+        D: 1201148446
+      position: {x: 600, y: 480, z: 0}
+      active: 1
+      color: {r: 1, g: 0.9899542, b: 0, a: 1}
+      coord: {x: 5, y: 0, z: 0}
+      pathName: bonus_alt
+      items:
+      - itemId:
+          A: 415271538
+          B: 1239728035
+          C: 1114535103
+          D: 562151354
+        type: 3
+        markerName: Treasure
+        referencedItemIds: []
+        editorSelected: 0
+        customInfo:
+          itemType: 
+          text: 
+          textColor: {r: 0, g: 0, b: 0, a: 0}
+          backgroundColor: {r: 0, g: 0, b: 0, a: 0}
+      - itemId:
+          A: 1650230806
+          B: 1249892096
+          C: 1277690531
+          D: 1136712578
+        type: 2
+        markerName: Grunt
+        referencedItemIds: []
+        editorSelected: 0
+        customInfo:
+          itemType: 
+          text: 
+          textColor: {r: 0, g: 0, b: 0, a: 0}
+          backgroundColor: {r: 0, g: 0, b: 0, a: 0}
+      - itemId:
+          A: 89059508
+          B: 1110171829
+          C: -1295140459
+          D: -1015325500
+        type: 2
+        markerName: Grunt
+        referencedItemIds: []
+        editorSelected: 0
+        customInfo:
+          itemType: 
+          text: 
+          textColor: {r: 0, g: 0, b: 0, a: 0}
+          backgroundColor: {r: 0, g: 0, b: 0, a: 0}
+      - itemId:
+          A: 135646217
+          B: 1315028830
+          C: 1776592307
+          D: -128546753
+        type: 2
+        markerName: Grunt
+        referencedItemIds: []
+        editorSelected: 0
+        customInfo:
+          itemType: 
+          text: 
+          textColor: {r: 0, g: 0, b: 0, a: 0}
+          backgroundColor: {r: 0, g: 0, b: 0, a: 0}
+      pathIndex: 0
+      pathLength: 1
+      mainPath: 0
+    - nodeId:
+        A: 1264416217
+        B: 1151332156
+        C: -907934580
+        D: -1235723970
+      position: {x: 0, y: 360, z: 0}
+      active: 1
+      color: {r: 0, g: 1, b: 0, a: 1}
+      coord: {x: 0, y: 1, z: 0}
+      pathName: main
+      items:
+      - itemId:
+          A: -269577425
+          B: 1194370556
+          C: -1701078874
+          D: 1203881870
+        type: 6
+        markerName: HealthPickup
+        referencedItemIds: []
+        editorSelected: 0
+        customInfo:
+          itemType: health
+          text: H
+          textColor: {r: 1, g: 0, b: 0, a: 1}
+          backgroundColor: {r: 1, g: 1, b: 1, a: 1}
+      pathIndex: 5
+      pathLength: 10
+      mainPath: 1
+    - nodeId:
+        A: 1190017094
+        B: 1222859626
+        C: 194513806
+        D: -1882946871
+      position: {x: 120, y: 360, z: 0}
+      active: 1
+      color: {r: 0, g: 1, b: 0, a: 1}
+      coord: {x: 1, y: 1, z: 0}
+      pathName: main
+      items:
+      - itemId:
+          A: 1375703818
+          B: 1206006477
+          C: 2054273198
+          D: 123798021
+        type: 2
+        markerName: Grunt
+        referencedItemIds: []
+        editorSelected: 0
+        customInfo:
+          itemType: 
+          text: 
+          textColor: {r: 0, g: 0, b: 0, a: 0}
+          backgroundColor: {r: 0, g: 0, b: 0, a: 0}
+      - itemId:
+          A: -1554682243
+          B: 1180381669
+          C: -520543300
+          D: -293350874
+        type: 2
+        markerName: Grunt
+        referencedItemIds: []
+        editorSelected: 0
+        customInfo:
+          itemType: 
+          text: 
+          textColor: {r: 0, g: 0, b: 0, a: 0}
+          backgroundColor: {r: 0, g: 0, b: 0, a: 0}
+      - itemId:
+          A: 1186263199
+          B: 1156512244
+          C: -956791918
+          D: -291685940
+        type: 2
+        markerName: Grunt
+        referencedItemIds: []
+        editorSelected: 0
+        customInfo:
+          itemType: 
+          text: 
+          textColor: {r: 0, g: 0, b: 0, a: 0}
+          backgroundColor: {r: 0, g: 0, b: 0, a: 0}
+      - itemId:
+          A: 201479055
+          B: 1264045328
+          C: 475095691
+          D: -929263260
+        type: 2
+        markerName: Grunt
+        referencedItemIds: []
+        editorSelected: 0
+        customInfo:
+          itemType: 
+          text: 
+          textColor: {r: 0, g: 0, b: 0, a: 0}
+          backgroundColor: {r: 0, g: 0, b: 0, a: 0}
+      pathIndex: 4
+      pathLength: 10
+      mainPath: 1
+    - nodeId:
+        A: -106349672
+        B: 1332196369
+        C: 486594478
+        D: -328978910
+      position: {x: 240, y: 360, z: 0}
+      active: 1
+      color: {r: 0, g: 1, b: 0, a: 1}
+      coord: {x: 2, y: 1, z: 0}
+      pathName: main
+      items:
+      - itemId:
+          A: 653343499
+          B: 1166139843
+          C: -1052958815
+          D: 268156659
+        type: 6
+        markerName: HealthPickup
+        referencedItemIds: []
+        editorSelected: 0
+        customInfo:
+          itemType: health
+          text: H
+          textColor: {r: 1, g: 0, b: 0, a: 1}
+          backgroundColor: {r: 1, g: 1, b: 1, a: 1}
+      - itemId:
+          A: 1554341492
+          B: 1203245613
+          C: -180939634
+          D: 841053295
+        type: 6
+        markerName: MyItem
+        referencedItemIds: []
+        editorSelected: 0
+        customInfo:
+          itemType: weapon_rack
+          text: W
+          textColor: {r: 0.0993236, g: 0.19598128, b: 0.2264151, a: 1}
+          backgroundColor: {r: 0.754717, g: 0.5991564, b: 0.38803846, a: 1}
+      pathIndex: 3
+      pathLength: 10
+      mainPath: 1
+    - nodeId:
+        A: 2058077681
+        B: 1182799842
+        C: -1302791257
+        D: -1742418305
+      position: {x: 360, y: 360, z: 0}
+      active: 1
+      color: {r: 1, g: 0.5, b: 0, a: 1}
+      coord: {x: 3, y: 1, z: 0}
+      pathName: alt
+      items: []
+      pathIndex: 0
+      pathLength: 5
+      mainPath: 0
+    - nodeId:
+        A: -455119616
+        B: 1218376245
+        C: -167132013
+        D: -624479801
+      position: {x: 480, y: 360, z: 0}
+      active: 1
+      color: {r: 1, g: 0.5, b: 0, a: 1}
+      coord: {x: 4, y: 1, z: 0}
+      pathName: alt
+      items:
+      - itemId:
+          A: 1532624331
+          B: 1171273242
+          C: 503562648
+          D: 1383581229
+        type: 0
+        markerName: KeyAltTreasure
+        referencedItemIds:
+        - A: 87258148
+          B: 1300175069
+          C: -631089774
+          D: 225540358
+        editorSelected: 0
+        customInfo:
+          itemType: custom
+          text: 
+          textColor: {r: 1, g: 1, b: 1, a: 1}
+          backgroundColor: {r: 0, g: 0, b: 0, a: 1}
+      - itemId:
+          A: 439136738
+          B: 1134283598
+          C: -1520141681
+          D: -693202045
+        type: 0
+        markerName: KeyAltPath
+        referencedItemIds:
+        - A: 1431919264
+          B: 1088062151
+          C: -1700024386
+          D: -1454913725
+        editorSelected: 0
+        customInfo:
+          itemType: custom
+          text: 
+          textColor: {r: 1, g: 1, b: 1, a: 1}
+          backgroundColor: {r: 0, g: 0, b: 0, a: 1}
+      - itemId:
+          A: -424265053
+          B: 1082512882
+          C: 1654479752
+          D: -1682539315
+        type: 6
+        markerName: HealthPickup
+        referencedItemIds: []
+        editorSelected: 0
+        customInfo:
+          itemType: health
+          text: H
+          textColor: {r: 1, g: 0, b: 0, a: 1}
+          backgroundColor: {r: 1, g: 1, b: 1, a: 1}
+      pathIndex: 1
+      pathLength: 5
+      mainPath: 0
+    - nodeId:
+        A: 1927111659
+        B: 1257780801
+        C: 1595745161
+        D: 1225090217
+      position: {x: 600, y: 360, z: 0}
+      active: 0
+      color: {r: 0, g: 1, b: 0, a: 1}
+      coord: {x: 5, y: 1, z: 0}
+      pathName: 
+      items: []
+      pathIndex: -1
+      pathLength: 0
+      mainPath: 0
+    - nodeId:
+        A: 759033974
+        B: 1256023984
+        C: 1640444065
+        D: -1999932201
+      position: {x: 0, y: 240, z: 0}
+      active: 1
+      color: {r: 0, g: 1, b: 0, a: 1}
+      coord: {x: 0, y: 2, z: 0}
+      pathName: main
+      items:
+      - itemId:
+          A: 1369074536
+          B: 1329504266
+          C: -260489561
+          D: -2004292197
+        type: 2
+        markerName: Grunt
+        referencedItemIds: []
+        editorSelected: 0
+        customInfo:
+          itemType: 
+          text: 
+          textColor: {r: 0, g: 0, b: 0, a: 0}
+          backgroundColor: {r: 0, g: 0, b: 0, a: 0}
+      - itemId:
+          A: 1391594639
+          B: 1223218028
+          C: 754091904
+          D: -1733120650
+        type: 2
+        markerName: Grunt
+        referencedItemIds: []
+        editorSelected: 0
+        customInfo:
+          itemType: 
+          text: 
+          textColor: {r: 0, g: 0, b: 0, a: 0}
+          backgroundColor: {r: 0, g: 0, b: 0, a: 0}
+      - itemId:
+          A: 1513876183
+          B: 1119710664
+          C: 268007303
+          D: -1988156381
+        type: 2
+        markerName: Grunt
+        referencedItemIds: []
+        editorSelected: 0
+        customInfo:
+          itemType: 
+          text: 
+          textColor: {r: 0, g: 0, b: 0, a: 0}
+          backgroundColor: {r: 0, g: 0, b: 0, a: 0}
+      - itemId:
+          A: 1517861455
+          B: 1225742661
+          C: -167384440
+          D: -860248406
+        type: 2
+        markerName: Grunt
+        referencedItemIds: []
+        editorSelected: 0
+        customInfo:
+          itemType: 
+          text: 
+          textColor: {r: 0, g: 0, b: 0, a: 0}
+          backgroundColor: {r: 0, g: 0, b: 0, a: 0}
+      pathIndex: 6
+      pathLength: 10
+      mainPath: 1
+    - nodeId:
+        A: -2092900251
+        B: 1228985810
+        C: -1398405972
+        D: 321104882
+      position: {x: 120, y: 240, z: 0}
+      active: 1
+      color: {r: 0, g: 1, b: 0, a: 1}
+      coord: {x: 1, y: 2, z: 0}
+      pathName: main
+      items:
+      - itemId:
+          A: 212273209
+          B: 1082134865
+          C: -1396082805
+          D: -1635122900
+        type: 0
+        markerName: KeyTreasure
+        referencedItemIds:
+        - A: -1047900928
+          B: 1219065540
+          C: 1515868339
+          D: -1508915467
+        editorSelected: 0
+        customInfo:
+          itemType: custom
+          text: 
+          textColor: {r: 1, g: 1, b: 1, a: 1}
+          backgroundColor: {r: 0, g: 0, b: 0, a: 1}
+      - itemId:
+          A: 673131468
+          B: 1148731904
+          C: -655060840
+          D: -1771606690
+        type: 2
+        markerName: Grunt
+        referencedItemIds: []
+        editorSelected: 0
+        customInfo:
+          itemType: 
+          text: 
+          textColor: {r: 0, g: 0, b: 0, a: 0}
+          backgroundColor: {r: 0, g: 0, b: 0, a: 0}
+      - itemId:
+          A: 211828346
+          B: 1213962184
+          C: -1783554168
+          D: 1948200469
+        type: 2
+        markerName: Grunt
+        referencedItemIds: []
+        editorSelected: 0
+        customInfo:
+          itemType: 
+          text: 
+          textColor: {r: 0, g: 0, b: 0, a: 0}
+          backgroundColor: {r: 0, g: 0, b: 0, a: 0}
+      - itemId:
+          A: -581562773
+          B: 1113243990
+          C: 1648830120
+          D: 414393752
+        type: 2
+        markerName: Grunt
+        referencedItemIds: []
+        editorSelected: 0
+        customInfo:
+          itemType: 
+          text: 
+          textColor: {r: 0, g: 0, b: 0, a: 0}
+          backgroundColor: {r: 0, g: 0, b: 0, a: 0}
+      - itemId:
+          A: 211738709
+          B: 1164260378
+          C: -1628067419
+          D: 1078639541
+        type: 2
+        markerName: Grunt
+        referencedItemIds: []
+        editorSelected: 0
+        customInfo:
+          itemType: 
+          text: 
+          textColor: {r: 0, g: 0, b: 0, a: 0}
+          backgroundColor: {r: 0, g: 0, b: 0, a: 0}
+      - itemId:
+          A: -2009976337
+          B: 1233545248
+          C: -225891148
+          D: -8629371
+        type: 2
+        markerName: Grunt
+        referencedItemIds: []
+        editorSelected: 0
+        customInfo:
+          itemType: 
+          text: 
+          textColor: {r: 0, g: 0, b: 0, a: 0}
+          backgroundColor: {r: 0, g: 0, b: 0, a: 0}
+      pathIndex: 7
+      pathLength: 10
+      mainPath: 1
+    - nodeId:
+        A: 1473413589
+        B: 1217146257
+        C: -694798436
+        D: 420029995
+      position: {x: 240, y: 240, z: 0}
+      active: 1
+      color: {r: 0, g: 1, b: 0, a: 1}
+      coord: {x: 2, y: 2, z: 0}
+      pathName: main
+      items: []
+      pathIndex: 2
+      pathLength: 10
+      mainPath: 1
+    - nodeId:
+        A: 2065517506
+        B: 1135495276
+        C: -1403014990
+        D: -1443463230
+      position: {x: 360, y: 240, z: 0}
+      active: 1
+      color: {r: 0, g: 1, b: 0, a: 1}
+      coord: {x: 3, y: 2, z: 0}
+      pathName: main
+      items: []
+      pathIndex: 1
+      pathLength: 10
+      mainPath: 1
+    - nodeId:
+        A: -2066999347
+        B: 1308860210
+        C: -91348349
+        D: -739139229
+      position: {x: 480, y: 240, z: 0}
+      active: 1
+      color: {r: 0, g: 1, b: 0, a: 1}
+      coord: {x: 4, y: 2, z: 0}
+      pathName: main_start
+      items:
+      - itemId:
+          A: 996565111
+          B: 1311954380
+          C: -449716091
+          D: -1098930865
+        type: 4
+        markerName: SpawnPoint
+        referencedItemIds: []
+        editorSelected: 0
+        customInfo:
+          itemType: custom
+          text: 
+          textColor: {r: 1, g: 1, b: 1, a: 1}
+          backgroundColor: {r: 0, g: 0, b: 0, a: 1}
+      pathIndex: 0
+      pathLength: 10
+      mainPath: 1
+    - nodeId:
+        A: 1895778038
+        B: 1176895208
+        C: -1891208792
+        D: -2063678602
+      position: {x: 600, y: 240, z: 0}
+      active: 0
+      color: {r: 0, g: 1, b: 0, a: 1}
+      coord: {x: 5, y: 2, z: 0}
+      pathName: 
+      items: []
+      pathIndex: -1
+      pathLength: 0
+      mainPath: 0
+    - nodeId:
+        A: -1184869682
+        B: 1339668901
+        C: 1528331186
+        D: -645507406
+      position: {x: 0, y: 120, z: 0}
+      active: 1
+      color: {r: 0, g: 1, b: 0, a: 1}
+      coord: {x: 0, y: 3, z: 0}
+      pathName: main_goal
+      items:
+      - itemId:
+          A: -954951531
+          B: 1197617242
+          C: 1383344056
+          D: -1779858514
+        type: 5
+        markerName: LevelGoal
+        referencedItemIds: []
+        editorSelected: 0
+        customInfo:
+          itemType: custom
+          text: 
+          textColor: {r: 1, g: 1, b: 1, a: 1}
+          backgroundColor: {r: 0, g: 0, b: 0, a: 1}
+      pathIndex: 9
+      pathLength: 10
+      mainPath: 1
+    - nodeId:
+        A: 2128180417
+        B: 1292809952
+        C: -855559524
+        D: -1131540031
+      position: {x: 120, y: 120, z: 0}
+      active: 1
+      color: {r: 0, g: 1, b: 0, a: 1}
+      coord: {x: 1, y: 3, z: 0}
+      pathName: main
+      items:
+      - itemId:
+          A: 44397055
+          B: 1111256937
+          C: -1725788502
+          D: -1433486652
+        type: 2
+        markerName: Grunt
+        referencedItemIds: []
+        editorSelected: 0
+        customInfo:
+          itemType: 
+          text: 
+          textColor: {r: 0, g: 0, b: 0, a: 0}
+          backgroundColor: {r: 0, g: 0, b: 0, a: 0}
+      - itemId:
+          A: -85117357
+          B: 1245384887
+          C: 81201310
+          D: 1408588086
+        type: 2
+        markerName: Grunt
+        referencedItemIds: []
+        editorSelected: 0
+        customInfo:
+          itemType: 
+          text: 
+          textColor: {r: 0, g: 0, b: 0, a: 0}
+          backgroundColor: {r: 0, g: 0, b: 0, a: 0}
+      - itemId:
+          A: -1398483926
+          B: 1105641713
+          C: 1047547264
+          D: 425527781
+        type: 2
+        markerName: Grunt
+        referencedItemIds: []
+        editorSelected: 0
+        customInfo:
+          itemType: 
+          text: 
+          textColor: {r: 0, g: 0, b: 0, a: 0}
+          backgroundColor: {r: 0, g: 0, b: 0, a: 0}
+      - itemId:
+          A: 235987993
+          B: 1087093863
+          C: -1211212875
+          D: 534464768
+        type: 2
+        markerName: Grunt
+        referencedItemIds: []
+        editorSelected: 0
+        customInfo:
+          itemType: 
+          text: 
+          textColor: {r: 0, g: 0, b: 0, a: 0}
+          backgroundColor: {r: 0, g: 0, b: 0, a: 0}
+      - itemId:
+          A: 1790422110
+          B: 1326282255
+          C: -1082776960
+          D: -306543538
+        type: 2
+        markerName: Grunt
+        referencedItemIds: []
+        editorSelected: 0
+        customInfo:
+          itemType: 
+          text: 
+          textColor: {r: 0, g: 0, b: 0, a: 0}
+          backgroundColor: {r: 0, g: 0, b: 0, a: 0}
+      pathIndex: 8
+      pathLength: 10
+      mainPath: 1
+    - nodeId:
+        A: -1076018226
+        B: 1253712108
+        C: 1944002993
+        D: 1249576741
+      position: {x: 240, y: 120, z: 0}
+      active: 1
+      color: {r: 0.3820755, g: 0.5912391, b: 1, a: 1}
+      coord: {x: 2, y: 3, z: 0}
+      pathName: alt2
+      items: []
+      pathIndex: 0
+      pathLength: 3
+      mainPath: 0
+    - nodeId:
+        A: -1839206985
+        B: 1252684493
+        C: -1805235582
+        D: -1687789099
+      position: {x: 360, y: 120, z: 0}
+      active: 1
+      color: {r: 0.13725491, g: 0.94509804, b: 0.74509805, a: 1}
+      coord: {x: 3, y: 3, z: 0}
+      pathName: main_key
+      items:
+      - itemId:
+          A: -1210866930
+          B: 1131388007
+          C: -286586461
+          D: -694036073
+        type: 0
+        markerName: KeyMain
+        referencedItemIds:
+        - A: -1881410158
+          B: 1289316284
+          C: -1380846934
+          D: -440540797
+        editorSelected: 0
+        customInfo:
+          itemType: custom
+          text: 
+          textColor: {r: 1, g: 1, b: 1, a: 1}
+          backgroundColor: {r: 0, g: 0, b: 0, a: 1}
+      - itemId:
+          A: 1638915367
+          B: 1281520545
+          C: 615882660
+          D: -833133429
+        type: 2
+        markerName: Grunt
+        referencedItemIds: []
+        editorSelected: 0
+        customInfo:
+          itemType: 
+          text: 
+          textColor: {r: 0, g: 0, b: 0, a: 0}
+          backgroundColor: {r: 0, g: 0, b: 0, a: 0}
+      pathIndex: 0
+      pathLength: 1
+      mainPath: 0
+    - nodeId:
+        A: -75360586
+        B: 1108944673
+        C: 2000584067
+        D: 748319577
+      position: {x: 480, y: 120, z: 0}
+      active: 1
+      color: {r: 1, g: 0.5330188, b: 0.88468874, a: 1}
+      coord: {x: 4, y: 3, z: 0}
+      pathName: shop
+      items:
+      - itemId:
+          A: 382599265
+          B: 1227460246
+          C: -2129474383
+          D: 625141925
+        type: 6
+        markerName: Shop
+        referencedItemIds: []
+        editorSelected: 0
+        customInfo:
+          itemType: shop
+          text: Sh
+          textColor: {r: 1, g: 1, b: 1, a: 1}
+          backgroundColor: {r: 0.4528302, g: 0, b: 0.061630752, a: 1}
+      pathIndex: 0
+      pathLength: 1
+      mainPath: 0
+    - nodeId:
+        A: 617885321
+        B: 1085618892
+        C: -610181474
+        D: -1271668980
+      position: {x: 600, y: 120, z: 0}
+      active: 0
+      color: {r: 0, g: 1, b: 0, a: 1}
+      coord: {x: 5, y: 3, z: 0}
+      pathName: 
+      items: []
+      pathIndex: -1
+      pathLength: 0
+      mainPath: 0
+    - nodeId:
+        A: 1290873626
+        B: 1284572298
+        C: -751565690
+        D: 383350130
+      position: {x: 0, y: 0, z: 0}
+      active: 0
+      color: {r: 0, g: 1, b: 0, a: 1}
+      coord: {x: 0, y: 4, z: 0}
+      pathName: 
+      items: []
+      pathIndex: -1
+      pathLength: 0
+      mainPath: 0
+    - nodeId:
+        A: -514196353
+        B: 1161000155
+        C: -214993534
+        D: -2076628084
+      position: {x: 120, y: 0, z: 0}
+      active: 1
+      color: {r: 0.3820755, g: 0.5912391, b: 1, a: 1}
+      coord: {x: 1, y: 4, z: 0}
+      pathName: alt2
+      items:
+      - itemId:
+          A: -1749828253
+          B: 1247243040
+          C: 117560708
+          D: -1189203767
+        type: 2
+        markerName: Grunt
+        referencedItemIds: []
+        editorSelected: 0
+        customInfo:
+          itemType: 
+          text: 
+          textColor: {r: 0, g: 0, b: 0, a: 0}
+          backgroundColor: {r: 0, g: 0, b: 0, a: 0}
+      - itemId:
+          A: -1872752641
+          B: 1203856485
+          C: 1196241303
+          D: -17873493
+        type: 2
+        markerName: Grunt
+        referencedItemIds: []
+        editorSelected: 0
+        customInfo:
+          itemType: 
+          text: 
+          textColor: {r: 0, g: 0, b: 0, a: 0}
+          backgroundColor: {r: 0, g: 0, b: 0, a: 0}
+      pathIndex: 2
+      pathLength: 3
+      mainPath: 0
+    - nodeId:
+        A: 1927670404
+        B: 1137754937
+        C: -527504492
+        D: -1524862630
+      position: {x: 240, y: 0, z: 0}
+      active: 1
+      color: {r: 0.3820755, g: 0.5912391, b: 1, a: 1}
+      coord: {x: 2, y: 4, z: 0}
+      pathName: alt2
+      items:
+      - itemId:
+          A: -340880959
+          B: 1126222898
+          C: 327504037
+          D: -1521942075
+        type: 2
+        markerName: Grunt
+        referencedItemIds: []
+        editorSelected: 0
+        customInfo:
+          itemType: 
+          text: 
+          textColor: {r: 0, g: 0, b: 0, a: 0}
+          backgroundColor: {r: 0, g: 0, b: 0, a: 0}
+      - itemId:
+          A: 912862649
+          B: 1190573610
+          C: 437542047
+          D: 1661108092
+        type: 2
+        markerName: Grunt
+        referencedItemIds: []
+        editorSelected: 0
+        customInfo:
+          itemType: 
+          text: 
+          textColor: {r: 0, g: 0, b: 0, a: 0}
+          backgroundColor: {r: 0, g: 0, b: 0, a: 0}
+      pathIndex: 1
+      pathLength: 3
+      mainPath: 0
+    - nodeId:
+        A: -1930068840
+        B: 1143951290
+        C: 1023170946
+        D: 611040812
+      position: {x: 360, y: 0, z: 0}
+      active: 0
+      color: {r: 0, g: 1, b: 0, a: 1}
+      coord: {x: 3, y: 4, z: 0}
+      pathName: 
+      items: []
+      pathIndex: -1
+      pathLength: 0
+      mainPath: 0
+    - nodeId:
+        A: -406059995
+        B: 1208785753
+        C: 1533799089
+        D: -2117141488
+      position: {x: 480, y: 0, z: 0}
+      active: 0
+      color: {r: 0, g: 1, b: 0, a: 1}
+      coord: {x: 4, y: 4, z: 0}
+      pathName: 
+      items: []
+      pathIndex: -1
+      pathLength: 0
+      mainPath: 0
+    - nodeId:
+        A: -1970992109
+        B: 1083097346
+        C: 354661052
+        D: -1258823520
+      position: {x: 600, y: 0, z: 0}
+      active: 0
+      color: {r: 0, g: 1, b: 0, a: 1}
+      coord: {x: 5, y: 4, z: 0}
+      pathName: 
+      items: []
+      pathIndex: -1
+      pathLength: 0
+      mainPath: 0
+    Links:
+    - linkId:
+        A: 817965726
+        B: 1159417488
+        C: -1971242578
+        D: -1071758910
+      source:
+        A: -1711206824
+        B: 1168614150
+        C: -1674041721
+        D: -902988463
+      destination:
+        A: 1923216922
+        B: 1262719148
+        C: 2092357541
+        D: 1166984582
+      state:
+        type: 1
+        items:
+        - itemId:
+            A: -1047900928
+            B: 1219065540
+            C: 1515868339
+            D: -1508915467
+          type: 1
+          markerName: LockTreasure
+          referencedItemIds:
+          - A: 212273209
+            B: 1082134865
+            C: -1396082805
+            D: -1635122900
+          editorSelected: 0
+          customInfo:
+            itemType: custom
+            text: 
+            textColor: {r: 1, g: 1, b: 1, a: 1}
+            backgroundColor: {r: 0, g: 0, b: 0, a: 1}
+      sourceSubNode:
+        A: 0
+        B: 0
+        C: 0
+        D: 0
+      destinationSubNode:
+        A: 0
+        B: 0
+        C: 0
+        D: 0
+    - linkId:
+        A: -613942088
+        B: 1242362644
+        C: -543342424
+        D: -29074109
+      source:
+        A: -743480471
+        B: 1095059803
+        C: -583609208
+        D: 1078836237
+      destination:
+        A: -920520293
+        B: 1296730428
+        C: 366009260
+        D: 1006234625
+      state:
+        type: 1
+        items: []
+      sourceSubNode:
+        A: 0
+        B: 0
+        C: 0
+        D: 0
+      destinationSubNode:
+        A: 0
+        B: 0
+        C: 0
+        D: 0
+    - linkId:
+        A: 2026068952
+        B: 1241930987
+        C: -1192873580
+        D: 1756938535
+      source:
+        A: 153603310
+        B: 1149193762
+        C: 309322927
+        D: -628040343
+      destination:
+        A: -743480471
+        B: 1095059803
+        C: -583609208
+        D: 1078836237
+      state:
+        type: 1
+        items: []
+      sourceSubNode:
+        A: 0
+        B: 0
+        C: 0
+        D: 0
+      destinationSubNode:
+        A: 0
+        B: 0
+        C: 0
+        D: 0
+    - linkId:
+        A: 1536281108
+        B: 1222825769
+        C: -393645388
+        D: -1433989856
+      source:
+        A: 153603310
+        B: 1149193762
+        C: 309322927
+        D: -628040343
+      destination:
+        A: 1609750487
+        B: 1087407816
+        C: -1580946500
+        D: 1201148446
+      state:
+        type: 1
+        items:
+        - itemId:
+            A: 87258148
+            B: 1300175069
+            C: -631089774
+            D: 225540358
+          type: 1
+          markerName: LockAltTreasure
+          referencedItemIds:
+          - A: 1532624331
+            B: 1171273242
+            C: 503562648
+            D: 1383581229
+          editorSelected: 0
+          customInfo:
+            itemType: custom
+            text: 
+            textColor: {r: 1, g: 1, b: 1, a: 1}
+            backgroundColor: {r: 0, g: 0, b: 0, a: 1}
+      sourceSubNode:
+        A: 0
+        B: 0
+        C: 0
+        D: 0
+      destinationSubNode:
+        A: 0
+        B: 0
+        C: 0
+        D: 0
+    - linkId:
+        A: -248172733
+        B: 1249159937
+        C: -1307277142
+        D: 1810332832
+      source:
+        A: 1264416217
+        B: 1151332156
+        C: -907934580
+        D: -1235723970
+      destination:
+        A: -1711206824
+        B: 1168614150
+        C: -1674041721
+        D: -902988463
+      state:
+        type: 1
+        items: []
+      sourceSubNode:
+        A: 0
+        B: 0
+        C: 0
+        D: 0
+      destinationSubNode:
+        A: 0
+        B: 0
+        C: 0
+        D: 0
+    - linkId:
+        A: -1360123482
+        B: 1159627345
+        C: 2115205526
+        D: -1428146401
+      source:
+        A: 1190017094
+        B: 1222859626
+        C: 194513806
+        D: -1882946871
+      destination:
+        A: 1264416217
+        B: 1151332156
+        C: -907934580
+        D: -1235723970
+      state:
+        type: 1
+        items: []
+      sourceSubNode:
+        A: 0
+        B: 0
+        C: 0
+        D: 0
+      destinationSubNode:
+        A: 0
+        B: 0
+        C: 0
+        D: 0
+    - linkId:
+        A: 929751175
+        B: 1244705272
+        C: -1107080574
+        D: 1544573838
+      source:
+        A: 1923216922
+        B: 1262719148
+        C: 2092357541
+        D: 1166984582
+      destination:
+        A: 1190017094
+        B: 1222859626
+        C: 194513806
+        D: -1882946871
+      state:
+        type: 2
+        items: []
+      sourceSubNode:
+        A: 0
+        B: 0
+        C: 0
+        D: 0
+      destinationSubNode:
+        A: 0
+        B: 0
+        C: 0
+        D: 0
+    - linkId:
+        A: 1024339755
+        B: 1225619676
+        C: -1125703282
+        D: -127423274
+      source:
+        A: -106349672
+        B: 1332196369
+        C: 486594478
+        D: -328978910
+      destination:
+        A: 1190017094
+        B: 1222859626
+        C: 194513806
+        D: -1882946871
+      state:
+        type: 1
+        items: []
+      sourceSubNode:
+        A: 0
+        B: 0
+        C: 0
+        D: 0
+      destinationSubNode:
+        A: 0
+        B: 0
+        C: 0
+        D: 0
+    - linkId:
+        A: 1404640467
+        B: 1240380872
+        C: 1120120193
+        D: 1814932291
+      source:
+        A: -920520293
+        B: 1296730428
+        C: 366009260
+        D: 1006234625
+      destination:
+        A: -106349672
+        B: 1332196369
+        C: 486594478
+        D: -328978910
+      state:
+        type: 2
+        items: []
+      sourceSubNode:
+        A: 0
+        B: 0
+        C: 0
+        D: 0
+      destinationSubNode:
+        A: 0
+        B: 0
+        C: 0
+        D: 0
+    - linkId:
+        A: -1898483172
+        B: 1138870135
+        C: -922570349
+        D: 1241538129
+      source:
+        A: 2058077681
+        B: 1182799842
+        C: -1302791257
+        D: -1742418305
+      destination:
+        A: -455119616
+        B: 1218376245
+        C: -167132013
+        D: -624479801
+      state:
+        type: 1
+        items: []
+      sourceSubNode:
+        A: 0
+        B: 0
+        C: 0
+        D: 0
+      destinationSubNode:
+        A: 0
+        B: 0
+        C: 0
+        D: 0
+    - linkId:
+        A: 572828450
+        B: 1325674814
+        C: -793063276
+        D: -754836107
+      source:
+        A: -455119616
+        B: 1218376245
+        C: -167132013
+        D: -624479801
+      destination:
+        A: 153603310
+        B: 1149193762
+        C: 309322927
+        D: -628040343
+      state:
+        type: 1
+        items:
+        - itemId:
+            A: 1431919264
+            B: 1088062151
+            C: -1700024386
+            D: -1454913725
+          type: 1
+          markerName: LockAltPath
+          referencedItemIds:
+          - A: 439136738
+            B: 1134283598
+            C: -1520141681
+            D: -693202045
+          editorSelected: 0
+          customInfo:
+            itemType: custom
+            text: 
+            textColor: {r: 1, g: 1, b: 1, a: 1}
+            backgroundColor: {r: 0, g: 0, b: 0, a: 1}
+      sourceSubNode:
+        A: 0
+        B: 0
+        C: 0
+        D: 0
+      destinationSubNode:
+        A: 0
+        B: 0
+        C: 0
+        D: 0
+    - linkId:
+        A: 1699446241
+        B: 1220523254
+        C: 1433298605
+        D: -1226563999
+      source:
+        A: 1264416217
+        B: 1151332156
+        C: -907934580
+        D: -1235723970
+      destination:
+        A: 759033974
+        B: 1256023984
+        C: 1640444065
+        D: -1999932201
+      state:
+        type: 1
+        items:
+        - itemId:
+            A: -1881410158
+            B: 1289316284
+            C: -1380846934
+            D: -440540797
+          type: 1
+          markerName: LockMain
+          referencedItemIds:
+          - A: -1210866930
+            B: 1131388007
+            C: -286586461
+            D: -694036073
+          editorSelected: 0
+          customInfo:
+            itemType: custom
+            text: 
+            textColor: {r: 1, g: 1, b: 1, a: 1}
+            backgroundColor: {r: 0, g: 0, b: 0, a: 1}
+      sourceSubNode:
+        A: 0
+        B: 0
+        C: 0
+        D: 0
+      destinationSubNode:
+        A: 0
+        B: 0
+        C: 0
+        D: 0
+    - linkId:
+        A: -1633468618
+        B: 1268353737
+        C: 682909065
+        D: 1612272459
+      source:
+        A: 759033974
+        B: 1256023984
+        C: 1640444065
+        D: -1999932201
+      destination:
+        A: -2092900251
+        B: 1228985810
+        C: -1398405972
+        D: 321104882
+      state:
+        type: 1
+        items: []
+      sourceSubNode:
+        A: 0
+        B: 0
+        C: 0
+        D: 0
+      destinationSubNode:
+        A: 0
+        B: 0
+        C: 0
+        D: 0
+    - linkId:
+        A: -563955666
+        B: 1156967539
+        C: -411831874
+        D: 1482113660
+      source:
+        A: 1473413589
+        B: 1217146257
+        C: -694798436
+        D: 420029995
+      destination:
+        A: -106349672
+        B: 1332196369
+        C: 486594478
+        D: -328978910
+      state:
+        type: 1
+        items: []
+      sourceSubNode:
+        A: 0
+        B: 0
+        C: 0
+        D: 0
+      destinationSubNode:
+        A: 0
+        B: 0
+        C: 0
+        D: 0
+    - linkId:
+        A: 655171394
+        B: 1284029725
+        C: -1487943805
+        D: 1928767020
+      source:
+        A: 2065517506
+        B: 1135495276
+        C: -1403014990
+        D: -1443463230
+      destination:
+        A: 1473413589
+        B: 1217146257
+        C: -694798436
+        D: 420029995
+      state:
+        type: 1
+        items: []
+      sourceSubNode:
+        A: 0
+        B: 0
+        C: 0
+        D: 0
+      destinationSubNode:
+        A: 0
+        B: 0
+        C: 0
+        D: 0
+    - linkId:
+        A: -1696634211
+        B: 1118917965
+        C: -521864296
+        D: -710414310
+      source:
+        A: 2065517506
+        B: 1135495276
+        C: -1403014990
+        D: -1443463230
+      destination:
+        A: 2058077681
+        B: 1182799842
+        C: -1302791257
+        D: -1742418305
+      state:
+        type: 1
+        items: []
+      sourceSubNode:
+        A: 0
+        B: 0
+        C: 0
+        D: 0
+      destinationSubNode:
+        A: 0
+        B: 0
+        C: 0
+        D: 0
+    - linkId:
+        A: -1037847493
+        B: 1089810748
+        C: 373333437
+        D: 17161974
+      source:
+        A: -2066999347
+        B: 1308860210
+        C: -91348349
+        D: -739139229
+      destination:
+        A: 2065517506
+        B: 1135495276
+        C: -1403014990
+        D: -1443463230
+      state:
+        type: 1
+        items: []
+      sourceSubNode:
+        A: 0
+        B: 0
+        C: 0
+        D: 0
+      destinationSubNode:
+        A: 0
+        B: 0
+        C: 0
+        D: 0
+    - linkId:
+        A: 2042513054
+        B: 1211334026
+        C: -1873019235
+        D: -904746085
+      source:
+        A: 2128180417
+        B: 1292809952
+        C: -855559524
+        D: -1131540031
+      destination:
+        A: -1184869682
+        B: 1339668901
+        C: 1528331186
+        D: -645507406
+      state:
+        type: 1
+        items: []
+      sourceSubNode:
+        A: 0
+        B: 0
+        C: 0
+        D: 0
+      destinationSubNode:
+        A: 0
+        B: 0
+        C: 0
+        D: 0
+    - linkId:
+        A: 304873977
+        B: 1263816303
+        C: -1023416180
+        D: 634654200
+      source:
+        A: -2092900251
+        B: 1228985810
+        C: -1398405972
+        D: 321104882
+      destination:
+        A: 2128180417
+        B: 1292809952
+        C: -855559524
+        D: -1131540031
+      state:
+        type: 2
+        items: []
+      sourceSubNode:
+        A: 0
+        B: 0
+        C: 0
+        D: 0
+      destinationSubNode:
+        A: 0
+        B: 0
+        C: 0
+        D: 0
+    - linkId:
+        A: -658822579
+        B: 1214065654
+        C: -1899096168
+        D: -637048540
+      source:
+        A: 1473413589
+        B: 1217146257
+        C: -694798436
+        D: 420029995
+      destination:
+        A: -1076018226
+        B: 1253712108
+        C: 1944002993
+        D: 1249576741
+      state:
+        type: 1
+        items: []
+      sourceSubNode:
+        A: 0
+        B: 0
+        C: 0
+        D: 0
+      destinationSubNode:
+        A: 0
+        B: 0
+        C: 0
+        D: 0
+    - linkId:
+        A: 200855663
+        B: 1249538693
+        C: -845154157
+        D: -1484334958
+      source:
+        A: 2065517506
+        B: 1135495276
+        C: -1403014990
+        D: -1443463230
+      destination:
+        A: -1839206985
+        B: 1252684493
+        C: -1805235582
+        D: -1687789099
+      state:
+        type: 1
+        items: []
+      sourceSubNode:
+        A: 0
+        B: 0
+        C: 0
+        D: 0
+      destinationSubNode:
+        A: 0
+        B: 0
+        C: 0
+        D: 0
+    - linkId:
+        A: 956827293
+        B: 1194014029
+        C: 736615333
+        D: -1134657604
+      source:
+        A: -2066999347
+        B: 1308860210
+        C: -91348349
+        D: -739139229
+      destination:
+        A: -75360586
+        B: 1108944673
+        C: 2000584067
+        D: 748319577
+      state:
+        type: 1
+        items: []
+      sourceSubNode:
+        A: 0
+        B: 0
+        C: 0
+        D: 0
+      destinationSubNode:
+        A: 0
+        B: 0
+        C: 0
+        D: 0
+    - linkId:
+        A: 2122140893
+        B: 1310803747
+        C: -1030594149
+        D: 138777744
+      source:
+        A: -514196353
+        B: 1161000155
+        C: -214993534
+        D: -2076628084
+      destination:
+        A: 2128180417
+        B: 1292809952
+        C: -855559524
+        D: -1131540031
+      state:
+        type: 1
+        items: []
+      sourceSubNode:
+        A: 0
+        B: 0
+        C: 0
+        D: 0
+      destinationSubNode:
+        A: 0
+        B: 0
+        C: 0
+        D: 0
+    - linkId:
+        A: 1500335496
+        B: 1134653088
+        C: -1281657728
+        D: -560211312
+      source:
+        A: 1927670404
+        B: 1137754937
+        C: -527504492
+        D: -1524862630
+      destination:
+        A: -514196353
+        B: 1161000155
+        C: -214993534
+        D: -2076628084
+      state:
+        type: 1
+        items: []
+      sourceSubNode:
+        A: 0
+        B: 0
+        C: 0
+        D: 0
+      destinationSubNode:
+        A: 0
+        B: 0
+        C: 0
+        D: 0
+    - linkId:
+        A: -1548725187
+        B: 1106025439
+        C: 1758367641
+        D: 1957873158
+      source:
+        A: -1076018226
+        B: 1253712108
+        C: 1944002993
+        D: 1249576741
+      destination:
+        A: 1927670404
+        B: 1137754937
+        C: -527504492
+        D: -1524862630
+      state:
+        type: 1
+        items: []
+      sourceSubNode:
+        A: 0
+        B: 0
+        C: 0
+        D: 0
+      destinationSubNode:
+        A: 0
+        B: 0
+        C: 0
+        D: 0
+  gridSize: {x: 4, y: 4, z: 4}
+  wallsAsEdges: 1
+  query: {fileID: 8289784509706679763}
+  lookups:
+    serializedNodeCoordLookup:
+    - coord:
+        x: 0
+        y: 0
+      index: 0
+    - coord:
+        x: 1
+        y: 0
+      index: 1
+    - coord:
+        x: 2
+        y: 0
+      index: 2
+    - coord:
+        x: 3
+        y: 0
+      index: 3
+    - coord:
+        x: 4
+        y: 0
+      index: 4
+    - coord:
+        x: 5
+        y: 0
+      index: 5
+    - coord:
+        x: 0
+        y: 1
+      index: 6
+    - coord:
+        x: 1
+        y: 1
+      index: 7
+    - coord:
+        x: 2
+        y: 1
+      index: 8
+    - coord:
+        x: 3
+        y: 1
+      index: 9
+    - coord:
+        x: 4
+        y: 1
+      index: 10
+    - coord:
+        x: 5
+        y: 1
+      index: 11
+    - coord:
+        x: 0
+        y: 2
+      index: 12
+    - coord:
+        x: 1
+        y: 2
+      index: 13
+    - coord:
+        x: 2
+        y: 2
+      index: 14
+    - coord:
+        x: 3
+        y: 2
+      index: 15
+    - coord:
+        x: 4
+        y: 2
+      index: 16
+    - coord:
+        x: 5
+        y: 2
+      index: 17
+    - coord:
+        x: 0
+        y: 3
+      index: 18
+    - coord:
+        x: 1
+        y: 3
+      index: 19
+    - coord:
+        x: 2
+        y: 3
+      index: 20
+    - coord:
+        x: 3
+        y: 3
+      index: 21
+    - coord:
+        x: 4
+        y: 3
+      index: 22
+    - coord:
+        x: 5
+        y: 3
+      index: 23
+    - coord:
+        x: 0
+        y: 4
+      index: 24
+    - coord:
+        x: 1
+        y: 4
+      index: 25
+    - coord:
+        x: 2
+        y: 4
+      index: 26
+    - coord:
+        x: 3
+        y: 4
+      index: 27
+    - coord:
+        x: 4
+        y: 4
+      index: 28
+    - coord:
+        x: 5
+        y: 4
+      index: 29
+--- !u!114 &5910525670812695108
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6022665015180171286}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd0ef9172759d43928c6f1131063f690, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemParent: {fileID: 0}
+--- !u!114 &540254647278541072
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6022665015180171286}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5bfe9cc405aea440915ad84edb36ac7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &267693455091782350
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6022665015180171286}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9fcceba8b342e742abf05970124e35a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &6603251336701148999
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6022665015180171286}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f97ba792dc3405345935639087029a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1171519897085319270
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6022665015180171286}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 652da2fd54ec98b488459a7ac73afcdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  updateFrequency: 0.05
+  enableFogOfWar: 1
+  minimapTexture: {fileID: 8400000, guid: bb9fa62f180a4cf40940a0ec57df87d1, type: 2}
+  compositeShader: {fileID: 4800000, guid: 7e1460c86b4767a4cb656ab35f9078c2, type: 3}
+  tileShader: {fileID: 4800000, guid: 935330e389a658349bd9450e337d1cc5, type: 3}
+  initMode: 0
+  icons:
+    iconOneWayDoor: {fileID: 2800000, guid: ff9e76e1bb9817e4abcf4837dd91a594, type: 3}
+  seeThroughWalls: 0
+--- !u!114 &8289784509706679763
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6022665015180171286}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f6e47af908046f58eacffae745ef582, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
